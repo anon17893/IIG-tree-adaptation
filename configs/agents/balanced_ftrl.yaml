@@ -1,0 +1,15 @@
+agent_class: 'agents.balanced_ftrl.BalancedFTRL'
+
+init_kwargs:
+  lr_constant: 1.0
+  lr_pow_X: 0.0
+  lr_pow_A: 0.0
+  lr_pow_H: 0.0
+  lr_pow_T: 0.0
+  ix_constant: 0.05
+  ix_pow_X: 0.0
+  ix_pow_A: 0.0
+  ix_pow_H: 0.0
+  ix_pow_T: 0.0
+  
+  name: 'BalancedFTRL'

@@ -1,0 +1,34 @@
+description: tree-ada_vs_baselines
+
+game_names: 
+  - kuhn_poker
+  - leduc_poker
+  - liars_dice
+
+n_simulations: 4
+save_path:  ./results
+
+
+global_init_kwargs:
+  budget: 10_000_000
+  
+tuning_parameters:
+  tune_parameters: True
+  size_grid_search: 80
+  lowest_multiplier: 0.000001
+  highest_multiplier: 1_000_000
+
+
+global_training_kwargs:
+  number_points: 50
+  first_point: 1_000
+  record_exploitabilities: True
+  verbose: 0
+
+agents: 
+  - ./configs/agents/ixomd.yaml
+  - ./configs/agents/balanced_omd.yaml
+  - ./configs/agents/balanced_ftrl.yaml
+  - ./configs/agents/adaptive_ftrl.yaml
+  - ./configs/agents/tweaked_ftrl.yaml
+
